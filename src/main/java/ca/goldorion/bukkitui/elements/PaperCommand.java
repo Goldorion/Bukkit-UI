@@ -24,7 +24,6 @@ public class PaperCommand extends GeneratableElement {
     public String commandName;
     public String description;
     public String usage;
-    public List<String> aliases;
     public String permission;
     public String permissionMessage;
 
@@ -36,8 +35,6 @@ public class PaperCommand extends GeneratableElement {
 
     public PaperCommand(ModElement element) {
         super(element);
-
-        this.aliases = new ArrayList<>();
     }
 
     @Override public BufferedImage generateModElementPicture() {

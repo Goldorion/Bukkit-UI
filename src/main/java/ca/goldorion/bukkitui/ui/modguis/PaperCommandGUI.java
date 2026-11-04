@@ -41,7 +41,6 @@ public class PaperCommandGUI extends ModElementGUI<PaperCommand> implements IBlo
             .enableRealtimeValidation();
     private final VTextField description = new VTextField(25);
     private final VTextField usage = new VTextField(25);
-    private final JStringListField aliases = new JStringListField(mcreator, null);
     private final VTextField permission = new VTextField(25).requireValue("elementgui.command.warning.empty_string")
             .enableRealtimeValidation();
     private final VTextField permissionMessage = new VTextField(25);
@@ -80,15 +79,6 @@ public class PaperCommandGUI extends ModElementGUI<PaperCommand> implements IBlo
         properties.add(description);
 
         properties.add(
-                HelpUtils.wrapWithHelpButton(this.withEntry("bukkit_command/usage"), L10N.label("elementgui.bukkit_command.usage")));
-        properties.add(usage);
-
-        properties.add(
-                HelpUtils.wrapWithHelpButton(this.withEntry("bukkit_command/aliases"), L10N.label("elementgui.bukkit_command.aliases")));
-        aliases.setUniqueEntries(true);
-        properties.add(aliases);
-
-        properties.add(
                 HelpUtils.wrapWithHelpButton(this.withEntry("bukkit_command/permission"), L10N.label("elementgui.bukkit_command.permission")));
         permission.setValidator(new PermissionValidator(permission));
         properties.add(permission);
@@ -96,6 +86,10 @@ public class PaperCommandGUI extends ModElementGUI<PaperCommand> implements IBlo
         properties.add(
                 HelpUtils.wrapWithHelpButton(this.withEntry("bukkit_command/permission_message"), L10N.label("elementgui.bukkit_command.permission_message")));
         properties.add(permissionMessage);
+
+        properties.add(
+                HelpUtils.wrapWithHelpButton(this.withEntry("bukkit_command/usage"), L10N.label("elementgui.bukkit_command.usage")));
+        properties.add(usage);
 
         page1group.addValidationElement(commandName);
         page1group.addValidationElement(permission);
@@ -169,7 +163,6 @@ public class PaperCommandGUI extends ModElementGUI<PaperCommand> implements IBlo
         description.setText(command.description);
         permission.setText(command.permission);
         permissionMessage.setText(command.permissionMessage);
-        aliases.setTextList(command.aliases);
         usage.setText(command.usage);
         blocklyPanel.setInitialXML(command.argsxml);
     }
@@ -180,7 +173,6 @@ public class PaperCommandGUI extends ModElementGUI<PaperCommand> implements IBlo
         command.commandName = commandName.getText();
         command.description = description.getText();
         command.usage = usage.getText();
-        command.aliases = aliases.getTextList();
         command.permission = permission.getText();
         command.permissionMessage = permissionMessage.getText();
         command.argsxml = blocklyPanel.getXML();
