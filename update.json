@@ -1,0 +1,8 @@
+{
+  "bukkit-ui": {
+    "latest": "1.0",
+    "changes": [
+      "Initial release"
+    ]
+  }
+}
