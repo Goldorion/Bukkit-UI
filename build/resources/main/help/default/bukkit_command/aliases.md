@@ -1,1 +1,0 @@
-This is a list of aliases that the command can be used with. This is useful for shortening the command.

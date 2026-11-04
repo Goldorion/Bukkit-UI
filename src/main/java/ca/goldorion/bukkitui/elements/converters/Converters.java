@@ -20,7 +20,6 @@ public class Converters {
                 paperCommand.commandName = command.commandName;
                 paperCommand.description = "";
                 paperCommand.usage = "";
-                paperCommand.aliases = new ArrayList<>();
                 paperCommand.permission = workspace.getWorkspaceSettings().getModID() + "." + command.commandName + ".use";
                 paperCommand.permissionMessage = "";
                 paperCommand.argsxml = command.argsxml;
