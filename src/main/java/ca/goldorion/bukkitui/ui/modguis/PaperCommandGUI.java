@@ -1,7 +1,7 @@
 package ca.goldorion.bukkitui.ui.modguis;
 
 import ca.goldorion.bukkitui.elements.PaperCommand;
-import ca.goldorion.bukkitui.utils.PermissionValidator;
+import ca.goldorion.bukkitui.utils.validators.PermissionValidator;
 import net.mcreator.blockly.BlocklyCompileNote;
 import net.mcreator.blockly.InternalBlocksLoader;
 import net.mcreator.blockly.data.BlocklyLoader;
@@ -16,7 +16,6 @@ import net.mcreator.generator.blockly.ProceduralBlockCodeGenerator;
 import net.mcreator.generator.template.TemplateGeneratorException;
 import net.mcreator.ui.MCreator;
 import net.mcreator.ui.blockly.*;
-import net.mcreator.ui.component.JStringListField;
 import net.mcreator.ui.component.util.ComponentUtils;
 import net.mcreator.ui.component.util.PanelUtils;
 import net.mcreator.ui.help.HelpUtils;

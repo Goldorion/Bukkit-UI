@@ -1,4 +1,4 @@
-package ca.goldorion.bukkitui.utils;
+package ca.goldorion.bukkitui.utils.validators;
 
 import net.mcreator.ui.init.L10N;
 import net.mcreator.ui.validation.ValidationResult;
